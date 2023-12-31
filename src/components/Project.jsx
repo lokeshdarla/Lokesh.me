@@ -1,84 +1,88 @@
 import React from 'react';
 import { Code } from 'lucide-react';
 import { Eye } from 'lucide-react';
+import { ArrowRightSquare } from 'lucide-react';
+import { FaPython,FaCss3Alt,FaHtml5,FaReact} from "react-icons/fa";
+import { SiTailwindcss,SiFastapi } from "react-icons/si";
+import { IoLogoJavascript } from "react-icons/io5";
+import { BiLogoPostgresql } from "react-icons/bi";
+import 'react-tooltip/dist/react-tooltip.css'
+import { Tooltip } from 'react-tooltip'
+import Ollivanders from "../assets/Ollivanders.gif"
+
+const skills=[
+  {
+    id:1,
+    icon:<FaHtml5 className="h-8 w-8 text-[#FB8B24]" />,
+    link:""
+  },
+  {
+    id:2,
+    icon:<FaCss3Alt className="h-8 w-8 text-[#3081D0]"/>,
+    link:""
+  },
+  {
+    id:3,
+    icon:<IoLogoJavascript className="h-8 w-8 text-[#FFD600]" />,
+    link:""  },
+  {
+    id:4,
+    icon:<FaPython className="h-8 w-8 text-[#38419D]"/>,
+    link:""
+  },
+
+
+  {
+    id:6,
+    icon: <FaReact className="h-8 w-8 text-[#7BD3EA]"/>,
+    link:""
+  },
+
+]
 
 const ProjectSection = () => {
   return (
-    <section className="bg-white m-5 sm:m-10 lg:m-20">
+    <section className="bg-transparent m-5 sm:m-10 lg:m-20 h-screen flex flex-col items-center justify-center">
       <div className="max-w-2xl mx-auto text-center">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-4">My Work</h1>
-        <p className="mt-2 text-sm sm:text-base lg:text-xl text-gray-500 sm:mt-4 lg:mt-8">
-          Crafted with skill and care to help our clients grow their business!
-        </p>
-      </div>
+      <h1
+  className="font-bold text-5xl text-gray-700 mb-4"
+>
+  My Work
+</h1>
 
-      <div className="flex flex-col-reverse sm:flex-row lg:flex-row items-center content-center mx-5 sm:mx-10 lg:mx-20 mt-5 lg:mt-10">
+      </div>
+     
+     <div className="flex flex-col-reverse sm:flex-row lg:flex-row items-center justify-center p-5 lg:m-5">
       
-        <div className="flex flex-col w-full sm:w-1/2 lg:w-1/2 mx-auto sm:mx-20 lg:mx-20">
-          <h1 className="text-gray-600 text-2xl sm:text-3xl lg:text-3xl font-extrabold mb-4">Flowbite's dashboard</h1>
-          <p className="content-around text-gray-500 text-justify">Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.</p>
+        <div className="flex flex-col w-full p-5 lg:m-5">
+          <h1 className="text-gray-600 text-2xl sm:text-3xl lg:text-3xl font-semibold mb-4">Ollivander's Store</h1>
+          <p className="content-around text-gray-500 text-justify">Ollivanders Store is a Harry Potter-themed E-Commerce Wand store where you can purchase wands of your choice. 
+          The application ensures the secure handling and storage of user details by employing JWT-based authentication and PostgreSQL for the backend.</p>
           <div className="flex gap-2 sm:gap-5 my-5">
-            <Code />
-            <Code />
-            <Code />
-          </div>
-          <div className="flex gap-3 sm:gap-8 ">
-            <a href="#_" className="relative inline-block px-4 py-2 font-medium group">
-            <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-            <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
-            <span className="relative text-black group-hover:text-white">View Live</span>
+          {skills.map((skill) => (
+            <>
+            <a
+              href={skill.link}
+              target="_blank"
+              key={skill.id}
+              className="rounded-full border-gray-200 bg-white p-1 shadow-sm transition-shadow duration-300 ease-in-out hover:shadow-lg"
+            >
+              {skill.icon}
             </a>
-            <a href="#_" className="relative inline-block px-4 py-2 font-medium group">
-            <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-            <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
-            <span className="relative text-black group-hover:text-white">View Code</span>
-            </a>
+            </>
+          ))}
           </div>
         </div>
 
-        <div className="w-full sm:w-1/2 lg:w-1/2 mx-auto sm:mx-20 lg:mx-20">
-          <figure className="max-w-lg m-5 sm:m-10">
+        <div className="lg:p-5">
+          <figure className="">
             <img
-              className="h-auto max-w-full rounded-lg transition-transform hover:scale-105"
-              src="https://images.pexels.com/photos/1037996/pexels-photo-1037996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              className="rounded-lg shadow-lg"
+              src={Ollivanders}
               alt="image description"
             />
             <figcaption className="mt-2 text-sm text-gray-500 dark:text-gray-400 text-center">Preview of Website</figcaption>
           </figure>
-        </div>
-      </div>
-
-      <div className="flex flex-col sm:flex-row lg:flex-row items-center content-center mx-5 sm:mx-10 lg:mx-20 mt-5 lg:mt-10">
-        <div className="w-full sm:w-1/2 lg:w-1/2 mx-auto sm:mx-20 lg:mx-20">
-          <figure className="max-w-lg m-5 sm:m-10">
-            <img
-              className="h-auto max-w-full rounded-lg transition-transform hover:scale-105" 
-              src="https://images.pexels.com/photos/1037996/pexels-photo-1037996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              alt="image description"
-            />
-            <figcaption className="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Preview of Website</figcaption>
-          </figure>
-        </div>
-        <div className="flex flex-col w-full sm:w-1/2 lg:w-1/2 mx-auto sm:mx-20 lg:mx-20">
-          <h1 className="text-gray-600 text-2xl sm:text-3xl lg:text-3xl font-extrabold mb-4 text-center">Flowbite's dashboard</h1>
-          <p className="content-around text-gray-500 text-justify">Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.</p>
-          <div className="flex gap-2 sm:gap-5 my-5 justify-center items-center">
-            <Code />
-            <Code />
-            <Code />
-          </div>
-          <div className="flex gap-3 sm:gap-8 items-center justify-center">
-            <a href="#_" className="relative inline-block px-4 py-2 font-medium group">
-            <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-            <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
-            <span className="relative text-black group-hover:text-white">View Live</span>
-            </a>
-            <a href="#_" className="relative inline-block px-4 py-2 font-medium group">
-            <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-            <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
-            <span className="relative text-black group-hover:text-white">View Code</span>
-            </a>
-          </div>
         </div>
       </div>
     </section>
