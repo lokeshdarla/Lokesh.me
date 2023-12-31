@@ -42,7 +42,7 @@ const skills=[
 
 const ProjectSection = () => {
   return (
-    <section className="bg-transparent m-5 sm:m-10 lg:m-20 h-screen flex flex-col items-center justify-center">
+    <section className="bg-transparent m-5 sm:m-10 lg:m-20 h-screen flex flex-col items-center justify-center gap-10">
       <div className="max-w-2xl mx-auto text-center">
       <h1
   className="font-bold text-5xl text-gray-700 mb-4"
@@ -52,7 +52,7 @@ const ProjectSection = () => {
 
       </div>
      
-     <div className="flex flex-col-reverse sm:flex-row lg:flex-row items-center justify-center p-5 lg:m-5">
+     <div className="flex flex-col-reverse sm:flex-row lg:flex-row items-center justify-center p-5 lg:m-5 gap-8">
       
         <div className="flex flex-col w-full p-5 lg:m-5">
           <h1 className="text-gray-600 text-2xl sm:text-3xl lg:text-3xl font-semibold mb-4">Ollivander's Store</h1>
