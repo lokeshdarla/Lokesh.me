@@ -9,6 +9,7 @@ const GridOverlay = () => {
     width: '100%',
     height: '100%',
     backgroundSize: '25px 25px',
+    zIndex: 0,
     backgroundImage: 'radial-gradient(black 0.5px, transparent 0)',
   };
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import profile from './profile.jpeg';
-import { Linkedin, Instagram, Github } from 'lucide-react';
 import CustomButton from './buttons';
 import { FaTwitter, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
@@ -34,7 +33,7 @@ const SocialMediaLinks = [
 
 function HomeSection() {
   return (
-    <div id="home" className="flex flex-col-reverse md:flex-row items-center justify-center  gap-5 md:gap-40 h-screen">
+    <div id="home" className="flex flex-col-reverse md:flex-row items-center justify-center gap-5 md:gap-40 h-screen relative">
       <div className="flex flex-col justify-evenly gap-2 text-center md:text-left">
         <h3 className="text-lg md:text-2xl">Hello, It's Me</h3>
         <h1 className="text-3xl md:text-5xl font-bold">

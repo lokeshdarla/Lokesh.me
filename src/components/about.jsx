@@ -1,4 +1,3 @@
-import CustomButton from "./buttons";
 import { Code } from 'lucide-react';
 import { Coffee } from 'lucide-react';
 import { ArrowRightSquare } from 'lucide-react';
@@ -6,9 +5,6 @@ import { FaPython,FaCss3Alt,FaHtml5,FaReact} from "react-icons/fa";
 import { SiTailwindcss,SiFastapi } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
 import { BiLogoPostgresql } from "react-icons/bi";
-
-const btnStyle = "bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow";
-const font="font-family: 'JetBrains Mono', monospace;"
 
 const skills=[
   {
@@ -59,7 +55,7 @@ const skills=[
 
 function AboutSection() {
   return (
-    <div  id="about" className="flex flex-col items-center justify-center h-screen p-10">
+    <div  id="about" className="flex flex-col items-center justify-center p-10 relative">
       <div className="w-full lg:w-1/2 text-center mb-8">
         
         <h1 className="text-4xl font-semibold mb-4"> Web Developer</h1>
@@ -76,8 +72,8 @@ function AboutSection() {
       <p><Code /></p>
       <p>Code</p>
     </div>
-  </div>
-        <h3 className="text-3xl font-semibold mb-2">Skills</h3>
+    </div>
+    <h3 className="text-3xl font-semibold mb-2">Skills</h3>
         <div className="flex flex-wrap gap-4 justify-center mt-5">
         {skills.map((skill) => (
             <a
