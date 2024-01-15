@@ -1,82 +1,59 @@
 import React from 'react';
-import { Mail } from 'lucide-react';
+import { FaTwitter, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
+
+const SocialMediaLinks = [
+  {
+    id: 1,
+    name: "Twitter",
+    icon: <FaTwitter className="h-6 w-6 text-[#1DA1F2]" />,
+    link: "https://twitter.com/LokeshDarla1011",
+  },
+  {
+    id: 2,
+    name: "Github",
+    icon: <FaGithub className="h-6 w-6 text-[#333]" />,
+    link: "https://github.com/lokeshdarla",
+  },
+  {
+    id: 3,
+    name: "Instagram",
+    icon: <FaInstagram className="h-6 w-6 text-[#C13584]" />,
+    link: "https://www.instagram.com/_lokesh_darla/",
+  },
+  {
+    id: 4,
+    name: "Linkedin",
+    icon: <FaLinkedin className="h-6 w-6 text-[#0077B5]" />,
+    link: "https://www.linkedin.com/in/lokesh-naga-sai-darla/",
+  },
+];
 function ContactSection() {
   return (
-    <section className="bg-white m-20">
-    <div className="container px-6 py-12 mx-auto">
-        <div>
-            <p className="font-medium">Contact us</p>
-
-            <h1 className="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl">Chat to our friendly team</h1>
-        </div>
-
-        <div className="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-2">
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-            <div className="flex gap-2 items-center">
-            <span className="inline-block p-3 text-black rounded-full bg-gray-100/80">
-                <Mail />
-            </span>
-            <div>
-            <h2 className="mt-4 text-base font-medium text-gray-800">Email</h2>
-            <p className="text-sm text-center">lokeshnagasaidarla@gmail.com</p>
-        </div>
+ <div className='flex flex-col items-center justify-center relative gap-10 px-10 h-3/4 mb-10' id='contact'>
+    <h1 className="text-5xl font-bold text-gray-700 mb-4 text-center">Connect</h1>
+   <h2 className='text-2xl font-semibold text-gray-600 lg:w-3/5 text-center lg:px-10'>Say Hello!,It's Free</h2>
+   <a href="#_" class="relative inline-block text-lg group">
+    <span class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+    <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
+    <span class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+    <span class="relative">Say Hello !</span>
+    </span>
+    <span class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
+    </a>
+    <div className='flex items-center justify-center gap-5'>
+    {SocialMediaLinks.map((link) => (
+            <a
+              href={link.link}
+              target="_blank"
+              key={link.id}
+              className="rounded-full border-gray-200 bg-white p-1 shadow-sm transition-shadow duration-300 ease-in-out hover:shadow-lg"
+            >
+              {link.icon}
+            </a>
+          ))}
     </div>
-    <div className="flex gap-2 items-center">
-            <span className="inline-block p-3 text-black rounded-full bg-gray-100/80">
-                <Mail />
-            </span>
-            <div>
-            <h2 className="mt-4 text-base font-medium text-gray-800">Email</h2>
-            <p className="text-sm text-center">lokeshnagasaidarla@gmail.com</p>
-        </div>
-    </div>
-    <div className="flex gap-2 items-center">
-            <span className="inline-block p-3 text-black rounded-full bg-gray-100/80">
-                <Mail />
-            </span>
-            <div>
-            <h2 className="mt-4 text-base font-medium text-gray-800">Email</h2>
-            <p className="text-sm text-center">lokeshnagasaidarla@gmail.com</p>
-        </div>
-    </div>
-
-
-            </div>
-
-            <div className="p-4 py-6 rounded-lg bg-gray-50 md:p-8">
-                <form>
-                    <div className="-mx-2 md:items-center md:flex">
-                        <div className="flex-1 px-2">
-                            <label className="block mb-2 text-sm text-gray-600">First Name</label>
-                            <input type="text" placeholder="John " className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring" />
-                        </div>
-
-                        <div className="flex-1 px-2 mt-4 md:mt-0">
-                            <label className="block mb-2 text-sm text-gray-600">Last Name</label>
-                            <input type="text" placeholder="Doe" className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring" />
-                        </div>
-                    </div>
-
-                    <div className="mt-4">
-                        <label className="block mb-2 text-sm text-gray-600">Email address</label>
-                        <input type="email" placeholder="johndoe@example.com" className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring" />
-                    </div>
-
-                    <div className="w-full mt-4">
-                        <label className="block mb-2 text-sm text-gray-600">Message</label>
-                        <textarea className="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg md:h-56 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring" placeholder="Message"></textarea>
-                    </div>
-
-                    <button className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
-                        Send message
-                    </button>
-                </form>
-            </div>
-        </div>
-        
-    </div>
-</section>
+ </div>
 
   );
 }

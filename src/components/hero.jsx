@@ -33,9 +33,9 @@ const SocialMediaLinks = [
 
 function HomeSection() {
   return (
-    <div id="home" className="flex flex-col-reverse md:flex-row items-center justify-center gap-5 md:gap-40 h-screen relative">
-      <div className="flex flex-col justify-evenly gap-2 text-center md:text-left">
-        <h3 className="text-lg md:text-2xl">Hello, It's Me</h3>
+    <div id="home" className="flex flex-col-reverse lg:flex-row items-center justify-center gap-5 md:gap-40 h-screen relative">
+      <div className="flex flex-col justify-center gap-2 text-center lg:text-left">
+        <h3 className="text-lg md:text-2xl">Hello, I'm</h3>
         <h1 className="text-3xl md:text-5xl font-bold">
           <span>Lokesh Naga Sai</span>
         </h1>

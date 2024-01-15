@@ -3,6 +3,7 @@ import { FaHtml5, FaCss3Alt, FaPython, FaReact } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io5';
 import Ollivanders from '../assets/Ollivanders.gif';
 import chemsite from '../assets/chemsite.gif';
+import Unknown from '../assets/Unknown.gif'
 import { RxExternalLink } from "react-icons/rx";
 
 const skills = [
@@ -20,6 +21,7 @@ const projects = [
       "Ollivanders Store is a Harry Potter-themed E-Commerce Wand store where you can purchase wands of your choice. The application ensures the secure handling and storage of user details by employing JWT-based authentication and PostgreSQL for the backend.",
     imageSrc: Ollivanders,
     altText: "Ollivanders Store",
+    link:"https://github.com/lokeshdarla/Ollivanders_store"
   },
   {
     title: "Chemsite",
@@ -27,6 +29,15 @@ const projects = [
       "Chemsite is a responsive website designed for a chemistry professor to promote and showcase his research work while encouraging students towards the field of chemistry. Built using React, this platform serves as a dynamic space for highlighting the professor's research endeavors and fostering an interest in chemistry among students.",
     imageSrc: chemsite,
     altText: "Chemsite",
+    link:""
+  },
+  {
+    title: "Unknown",
+    description:
+    "Unknown is a pseudonymous share website where users' data will be encrypted with passlib, implemented using React.js, FastAPI, and Google Auth.",
+    imageSrc: Unknown,
+    altText: "Unknown",
+    link:""
   },
 ];
 
@@ -48,6 +59,10 @@ const ProjectCard = ({ title, description, imageSrc, altText }) => (
           </a>
         ))}
       </div>
+      <div className='flex'>
+      <a href='#' className='px-5 py-2 rounded-full border text-white bg-[#050708] hover:bg-[#050708]/90 focus:ring-4 focus:outline-none flex items-center gap-2 text-md'>Github<span><RxExternalLink/></span></a>
+      </div>
+      
     </div>
     <div className="lg:p-5">
       <figure className="">
@@ -60,7 +75,7 @@ const ProjectCard = ({ title, description, imageSrc, altText }) => (
 
 const ProjectSection = () => {
   return (
-    <div className="flex flex-col items-center justify-center lg:mx-20 mx-1 relative">
+    <div id='projects' className="flex flex-col items-center justify-center lg:mx-20 mx-1 relative">
       <div className="max-w-2xl mx-auto text-center">
         <h1 className="font-bold text-5xl text-gray-700 mb-4">My Work</h1>
       </div>
