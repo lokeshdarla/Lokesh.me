@@ -21,7 +21,8 @@ const projects = [
       "Ollivanders Store is a Harry Potter-themed E-Commerce Wand store where you can purchase wands of your choice. The application ensures the secure handling and storage of user details by employing JWT-based authentication and PostgreSQL for the backend.",
     imageSrc: Ollivanders,
     altText: "Ollivanders Store",
-    link:"https://github.com/lokeshdarla/Ollivanders_store"
+    link:"https://github.com/lokeshdarla/Ollivanders_store",
+    previewLink:""
   },
   {
     title: "Chemsite",
@@ -29,7 +30,8 @@ const projects = [
       "Chemsite is a responsive website designed for a chemistry professor to promote and showcase his research work while encouraging students towards the field of chemistry. Built using React, this platform serves as a dynamic space for highlighting the professor's research endeavors and fostering an interest in chemistry among students.",
     imageSrc: chemsite,
     altText: "Chemsite",
-    link:""
+    link:"https://github.com/lokeshdarla/chemsite",
+    previewLink:"https://chemsite.vercel.app/"
   },
   {
     title: "Unknown",
@@ -37,11 +39,12 @@ const projects = [
     "Unknown is a pseudonymous share website where users' data will be encrypted with passlib, implemented using React.js, FastAPI, and Google Auth.",
     imageSrc: Unknown,
     altText: "Unknown",
-    link:""
+    link:"",
+    previewLink:""
   },
 ];
 
-const ProjectCard = ({ title, description, imageSrc, altText }) => (
+const ProjectCard = ({ title, description, imageSrc, altText,previewLink }) => (
   <div className="flex flex-col-reverse sm:flex-row lg:flex-row items-center justify-center p-5 lg:m-5 gap-8">
     <div className="flex flex-col w-full p-5 lg:m-5">
       <h1 className="text-gray-600 text-2xl sm:text-3xl lg:text-3xl font-semibold mb-4">{title}</h1>
@@ -67,7 +70,7 @@ const ProjectCard = ({ title, description, imageSrc, altText }) => (
     <div className="lg:p-5">
       <figure className="">
         <img className="rounded-lg shadow-lg" src={imageSrc} alt={altText} />
-        <a className="mt-2 text-sm text-gray-400 hover:underline cursor-pointer flex items-center justify-center gap-2 text-center">Preview of Website<span><RxExternalLink /></span></a>
+        <a href={previewLink} target='_blank' className="mt-2 text-sm text-gray-400 hover:underline cursor-pointer flex items-center justify-center gap-2 text-center">Preview of the website<span><RxExternalLink /></span></a>
       </figure>
     </div>
   </div>
