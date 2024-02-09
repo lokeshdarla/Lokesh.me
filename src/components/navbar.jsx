@@ -6,9 +6,9 @@ import Tooltip from './utils/ToolTip';
 
 const Header = () => {
   return (
-    <nav className="fixed top-0 right-20 h-screen lg:flex flex-col items-center justify-center hidden">
-      <div className="bg-white shadow-lg p-3 rounded-2xl">
-      <ul className="flex-col justify-between text-sm font-medium text-gray-500 gap-8 ">
+    <nav className="fixed bottom-0 flex-col items-center justify-center hidden h-screen right-20 lg:flex">
+      <div className="p-3 bg-white shadow-lg rounded-2xl">
+      <ul className="flex-col justify-between gap-8 text-sm font-medium text-gray-500 ">
         <li  data-tooltip-target="tooltip-home">
           <a href="">
           <Tooltip text="Home">
@@ -18,7 +18,7 @@ const Header = () => {
         </li>
         <li>
       
-          <a href="#about" className="flex items-center justify-center hover:text-black mt-5">
+          <a href="#about" className="flex items-center justify-center mt-5 hover:text-black">
           <a href="">
           <Tooltip text="About">
             <User/>
@@ -28,14 +28,14 @@ const Header = () => {
         </li>
         <li>
        
-          <a href="#projects" className="flex items-center justify-center hover:text-black mt-5">
+          <a href="#projects" className="flex items-center justify-center mt-5 hover:text-black">
           <Tooltip text="Projects">
           <GanttChart />
           </Tooltip>
           </a>
         </li>
         <li>
-          <a href="#contact" className="flex items-center justify-center hover:text-black mt-5">
+          <a href="#contact" className="flex items-center justify-center mt-5 hover:text-black">
           <Tooltip text="contact">
           <AtSign />
           </Tooltip>

@@ -31,30 +31,26 @@ const SocialMediaLinks = [
 function ContactSection() {
   const email="lokeshnagasaidarla@gmail.com"
   return (
- <div className='flex flex-col items-center justify-center relative gap-10 px-10 h-3/4 mb-10' id='contact'>
-    <h1 className="text-5xl font-bold text-gray-700 mb-4 text-center">Connect</h1>
-   <a className='text-2xl font-semibold text-gray-600 lg:w-3/5 text-center lg:px-10'>Say Hello!,It's Free</a>
-   <a href={`mailto:${email}`}  class="relative inline-block text-lg group">
-    <span class="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-    <span class="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
-    <span class="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-    <span class="relative">Say Hello !</span>
-    </span>
-    <span class="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
-    </a>
-    <div className='flex items-center justify-center gap-5'>
-    {SocialMediaLinks.map((link) => (
-            <a
-              href={link.link}
-              target="_blank"
-              key={link.id}
-              className="rounded-full border-gray-200 bg-white p-1 shadow-sm transition-shadow duration-300 ease-in-out hover:shadow-lg"
-            >
-              {link.icon}
-            </a>
-          ))}
+    <section
+    className="relative flex flex-col items-center justify-center w-full min-h-screen px-2"
+    id="contact"
+  >
+    <div className="w-full h-full px-4 py-8">
+      <h2 className="text-3xl font-bold text-center scroll-m-20 font-plus-jakarta-sans">
+        Get in touch
+      </h2>
     </div>
- </div>
+
+    <div className="flex flex-col items-center justify-center h-full mt-10 space-y-3">
+      <span className="max-w-xl text-xl font-normal text-center text-gray-600 scroll-m-20 font-plus-jakarta-sans">
+        My inbox is always open. Whether for a potential project or just to
+        say Hello, I&apos;ll try my best to answer your email!
+      </span>
+      <a href={`mailto:${email}`} className="text-xl font-medium text-gray-900 font-plus-jakarta-sans">
+        {email}
+      </a>
+    </div>
+  </section>
 
   );
 }
