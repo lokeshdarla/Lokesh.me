@@ -4,6 +4,7 @@ import ProjectSection from './components/Project'
 import GridOverlay from './components/Background'
 import { Navbar } from './components/navbar'
 import ContactSection from './components/contact'
+import BlogSection from './components/BlogSection'
 
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
     <AboutSection/>
     <br />
     <ProjectSection/>
+    {/* <br />
+    <BlogSection/> */}
     <br />
     <ContactSection/>
     </>
