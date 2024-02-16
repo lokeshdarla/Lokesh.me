@@ -14,7 +14,7 @@ function BlogSection() {
        <div className='relative flex flex-col items-start justify-center' >
       <div className="max-w-md px-5 py-8">
           <h1 className="text-2xl font-bold text-gray-600">I write,sometimes</h1>
-          <p className="mt-2 text-gray-600">About design,frontend dev,learning and life.</p>
+          <p className="mt-2 text-gray-600">About Tech,dsa,learning,tutorials and life.</p>
         </div>
       <div className="flex items-start px-5 border-b border-gray-200 whitespace-nowrap dark:border-gray-700">
         {sections.map((section) => (

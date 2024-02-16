@@ -10,7 +10,7 @@ const skills=[
   {
     id:1,
     icon:<FaHtml5 className="h-8 w-8 text-[#FB8B24]" />,
-    link:""
+    link:"https://notesfordev.notion.site/HTML-982dc837c598443fb80a4cc08f1b8cc4"
   },
   {
     id:2,
@@ -55,13 +55,13 @@ const skills=[
 
 function AboutSection() {
   return (
-    <div  id="about" className="flex flex-col items-center justify-center p-10 relative">
-      <div className="w-full lg:w-1/2 text-center mb-8">
+    <div  id="about" className="relative flex flex-col items-center justify-center p-10">
+      <div className="w-full mb-8 text-center lg:w-1/2">
         
-        <h1 className="text-4xl font-semibold mb-4"> Web Developer</h1>
-        <div className="flex flex-col items-center gap-4 w-full text-center">
+        <h1 className="mb-4 text-4xl font-semibold"> Web Developer</h1>
+        <div className="flex flex-col items-center w-full gap-4 text-center">
         
-    <p className="m-4 font-extralight text-xl text-black text-justify">
+    <p className="m-4 text-xl text-justify text-black font-extralight">
     Hello! I'm   Lokesh Naga Sai, a computer science undergraduate at SRM University AP. I specialize in full-stack web development, crafting robust and user-friendly applications. My expertise extends from the back-end, utilizing technologies like FastAPI, to the front-end, where I design beautiful and intuitive user interfaces.
     </p>
     <div className="flex gap-4 mb-4" style={{fontFamily: "'JetBrains Mono', monospace"}}>
@@ -73,14 +73,14 @@ function AboutSection() {
       <p>Code</p>
     </div>
     </div>
-    <h3 className="text-3xl font-semibold mb-2">Skills</h3>
-        <div className="flex flex-wrap gap-4 justify-center mt-5">
+    <h3 className="mb-2 text-3xl font-semibold">Skills</h3>
+        <div className="flex flex-wrap justify-center gap-4 mt-5">
         {skills.map((skill) => (
             <a
               href={skill.link}
               target="_blank"
               key={skill.id}
-              className="rounded-full border-gray-200 bg-white p-1 shadow-sm transition-shadow duration-300 ease-in-out hover:shadow-lg"
+              className="p-1 transition-shadow duration-300 ease-in-out bg-white border-gray-200 rounded-full shadow-sm hover:shadow-lg"
             >
               {skill.icon}
             </a>

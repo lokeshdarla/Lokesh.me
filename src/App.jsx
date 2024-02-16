@@ -21,8 +21,8 @@ function App() {
     <AboutSection/>
     <br />
     <ProjectSection/>
-    {/* <br />
-    <BlogSection/> */}
+    <br />
+    <BlogSection/>
     <br />
     <ContactSection/>
     </>
